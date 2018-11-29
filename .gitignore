@@ -1,0 +1,6 @@
+# terraform resource
+.terraform
+terraform.tfstate
+
+# direnv resource
+.envrc

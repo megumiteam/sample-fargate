@@ -1,0 +1,21 @@
+[
+    {
+        "name": "${app_name}",
+        "image": "${image}",
+        "cpu": ${cpu},
+        "memory": ${memory},
+        "essential": true,
+        "network_mode": "awsvpc",
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "${awslogs}-log",
+                "awslogs-region": "${region}",
+                "awslogs-stream-prefix": "${awslogs}"
+            }
+        },
+        "environment" : [
+            { "name" : "STAGE", "value" : "${stage}" },
+        ]
+    }
+]
